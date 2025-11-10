@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Anti-Fraud Detector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; min-width: 300px; padding: 10px; background-color: #f7f9fc; margin: 0; }
+        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .header h3 { color: #1a3449; margin: 0; font-size: 1.2em; }
+        .header i { color: #64b5f6; margin-right: 8px; }
+        .scan-button { background-color: #64b5f6; color: white; border: none; padding: 10px 15px; border-radius: 5px; width: 100%; cursor: pointer; transition: background-color 0.3s; font-weight: bold; }
+        .scan-button:hover { background-color: #4a90e2; }
+        #status { padding: 10px; margin-top: 10px; border-radius: 5px; font-weight: bold; text-align: center; }
+        .safe { background-color: #e6ffe6; color: #1e8449; }
+        .risky { background-color: #ffebeb; color: #c0392b; }
+        .loading { background-color: #fff3e0; color: #f57f17; }
+        .current-url { margin-top: 10px; font-size: 0.85em; color: #666; word-break: break-all; }
+        .language-switcher { display: flex; justify-content: flex-end; font-size: 0.8em; margin-top: 5px; }
+        .language-switcher button { background: none; border: none; color: #64b5f6; cursor: pointer; padding: 0 5px; }
+        .language-switcher button.active { color: #1a3449; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3><i class="fa-solid fa-shield-halved"></i> <span id="popupTitle">即時偵測</span></h3>
+        <div class="language-switcher">
+            <button id="lang-zh" data-lang="zh_TW">繁中</button> |
+            <button id="lang-en" data-lang="en">EN</button>
+        </div>
+    </div>
+
+    <button id="scanButton" class="scan-button"><i class="fa-solid fa-play"></i> <span id="scanButtonText">偵測當前頁面</span></button>
+    
+    <div id="status" class="loading"><span id="statusText">點擊上方按鈕開始偵測...</span></div>
+    
+    <div class="current-url" id="currentUrl"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

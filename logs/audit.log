@@ -1,0 +1,4 @@
+[2025-11-08 09:23:10] [CHECKOUT] [STATUS:SUCCESS] [USER:User_Simulated] [DATA:{'method': 'paypal', 'amount': 199}] [IP:127.0.0.1]
+[2025-11-08 09:23:45] [CHECKOUT] [STATUS:SUCCESS] [USER:User_Simulated] [DATA:{'method': 'bank', 'amount': 199}] [IP:127.0.0.1]
+[2025-11-08 09:38:23] [SCAN] [STATUS:SUCCESS_RISKY] [USER:Client] [DATA:{'url': 'https://www.scam.com'}] [IP:127.0.0.1]
+[2025-11-08 09:39:18] [REPORT] [STATUS:SUCCESS_REWARD] [USER:Client] [DATA:{'url': 'https://malicious-site.com', 'email': ''}] [IP:127.0.0.1]
